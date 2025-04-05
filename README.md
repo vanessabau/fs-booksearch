@@ -1,36 +1,32 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Book Search Web App
+
+Book search web application utilizing Next.js, Google Books API, and React
+
+![Screenshot 2025-04-04 at 5 43 18 PM](https://github.com/user-attachments/assets/9c91a52a-4f4b-48d9-813e-621e1a1cb894)
+
 
 ## Getting Started
 
-First, run the development server:
+Clone application, install, and run development server
 
 ```bash
+git clone
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployed on Vercel
 
-## Learn More
+Visit the application https://fs-booksearch.vercel.app/
 
-To learn more about Next.js, take a look at the following resources:
+## Wireframe, Color Palate
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Screenshot 2025-04-04 at 4 26 26 PM](https://github.com/user-attachments/assets/970a59b9-5cbb-408e-9f65-c563670fc779)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Screenshot 2025-04-04 at 5 32 30 PM](https://github.com/user-attachments/assets/1965efdc-ec14-4999-8d22-6e1a631d888a)
