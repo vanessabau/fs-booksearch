@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import { Header } from '@/components/header/header';
+import { BookCard } from '@/components/book-card/book-card';
 import styles from './page.module.css';
 
 interface Book {
@@ -56,62 +57,27 @@ console.log(books);
             <button onClick={searchBooks} className={styles.searchButton}>Search</button>
           </div>
 
-          <div>
-            {books.length > 0 && (
-                <ul className={styles.bookList}>
-                  {books.map((book) => (
-                      <li key={book.id}>
-                        {book.volumeInfo.title} by {book.volumeInfo.authors?.join(', ')}
-                      </li>
-                  ))}
-                </ul>
-            )}
-          </div>
+              <div>
+                  {books.length > 0 && (
+                      <ul className={styles.bookList}>
+                          {books.map((book) => (
+                              book.volumeInfo.imageLinks && (
+                                  <BookCard
+                                      key={book.id}
+                                      title={book.volumeInfo.title}
+                                      authors={book.volumeInfo.authors}
+                                      imageLinks={book.volumeInfo.imageLinks}
+                                      description={book.volumeInfo.description}
+                                  />
+                              )
+                          ))}
+                      </ul>
+                  )}
+              </div>
           </section>
         </main>
         <footer className={styles.footer}>
-          <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            <Image
-                aria-hidden
-                src="/file.svg"
-                alt="File icon"
-                width={16}
-                height={16}
-            />
-            Learn
-          </a>
-          <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            <Image
-                aria-hidden
-                src="/window.svg"
-                alt="Window icon"
-                width={16}
-                height={16}
-            />
-            Examples
-          </a>
-          <a
-              href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            <Image
-                aria-hidden
-                src="/globe.svg"
-                alt="Globe icon"
-                width={16}
-                height={16}
-            />
-            Go to nextjs.org →
-          </a>
+          &copy; {new Date().getFullYear()} Azula Design
         </footer>
       </div>
   );

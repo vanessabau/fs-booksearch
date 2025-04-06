@@ -1,0 +1,10 @@
+.bookCard{
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem 5rem;
+    color: #FFFFFF;
+}
+
+.bookDetails{
+    margin-left: 1rem;
+}
